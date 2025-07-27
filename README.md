@@ -15,8 +15,7 @@ You can play the live version instantly in your browser. No setup is needed.
 ## Features
 
   * **Multiple Interaction Modes**: Seamlessly switch between marking stars, free-form drawing, and creating custom region borders.
-  * **Client-Side Solving**: Generate new puzzles and find solutions instantly without any server-side processing.
-  * **Advanced UI**: Includes a customizable color picker, adjustable brush sizes, and a responsive layout for both desktop and mobile.
+  * **Client-Side Solving**: Generate new puzzles and find esponsive layout for both desktop and mobile.
   * **Full History Management**: Robust undo and redo support is available for every action, including marking, drawing, and bordering.
   * **Save & Load**: Save your puzzle progress, including all marks and drawings, to your browser's local storage and load it back later.
   * **Import & Export**: Share puzzles with others using the compact Star Battle Notation (SBN) format.
