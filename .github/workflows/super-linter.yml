@@ -55,4 +55,3 @@ jobs:
           # Use our custom prettier config file
           PRETTIER_CONFIG_FILE: .prettierrc.json
           # Use our custom pyproject.toml for Python's Black formatter
-          PYTHON_BLACK_CONFIG_FILE: pyproject.toml
