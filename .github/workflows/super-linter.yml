@@ -1,0 +1,37 @@
+name: Super-Linter with Auto-Fix
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  super-linter:
+    name: Lint and Format Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run Super-Linter
+        uses: super-linter/super-linter@v8
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_HTML: true
+          VALIDATE_JAVASCRIPT: true
+          VALIDATE_CSS: true
+          VALIDATE_PYTHON: true
+          VALIDATE_JSON: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FIX_CSS: true
+          FIX_JAVASCRIPT_ES: true
+          FIX_JSON: true
+          FIX_PYTHON_BLACK: true
+          IGNORE_GITIGNORED_FILES: true
+          PYTHON_BLACK_CONFIG_FILE: .black.toml
+          JAVASCRIPT_DEFAULT_STYLE: prettier
+          CSS_DEFAULT_STYLE: prettier
+          LINTER_RULES_PATH: .github/linters
+permissions:
+  contents: write
+  statuses: write
